@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
     return (
         <footer>
-            <p>Created by someguy</p>
+            <p>This is a footer created by someguy</p>
         </footer>
     )
 }
