@@ -10,6 +10,7 @@ module.exports = {
     title: 'Gatsby Bootcamp demo',
     author: 'Akram S'
   },
+  pathPrefix: "/gatsby-bootcamp",
   plugins: [
     'gatsby-plugin-sass',
     {
