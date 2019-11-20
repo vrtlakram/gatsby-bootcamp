@@ -7,11 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Gatsby Bootcamp demo!',
+    title: 'Gatsby Bootcamp demo',
     author: 'Akram S'
   },
   plugins: [
-    'gatsby-plugin-sass', `gatsby-transformer-remark`,
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -19,5 +19,21 @@ module.exports = {
         path: `${__dirname}/src/`,
       }
     },
+     'gatsby-plugin-sharp',
+     {
+       resolve: `gatsby-transformer-remark`,
+       options: {
+         plugins: [
+           'gatsby-remark-relative-images',
+           {
+             resolve: 'gatsby-remark-images',
+             options: {
+               maxWidth: 750,
+               linkImagesToOriginal: false,
+             }
+           }
+         ]
+       }
+     }
   ]
 }
